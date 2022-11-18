@@ -18,7 +18,8 @@ been dropped out for simplicity.
 
 ´git clone https://github.com/iterative/VSCode-DVC-Workshop´
 
-2. Create virtual environment
+2. Create virtual environment. Once created, a popup window might show up
+to select the environment for the workspace. Click yes
 
 ´pip install virtualenv´
 ´cd VSCode-DVC-Workshop/
@@ -31,12 +32,15 @@ activate existing virtual environment
 
 3. Install requirements
 
-´pip install requirements.txt´
+´pip install -r requirements.txt´
 
 4. Install DVC VSCode extension from the marketplace. For that, Inside your
 IDE, go to Extensions and search for DVC and click install
 
 (image)
+
+5. Open the Command Palette (F1 or ⇧⌃P on Windows/Linux or ⇧⌘P on macOS) and type
+DVC: Setup The Workspace
 
 5. Read the documentation and customize the ´dvc.yaml´ , ´params.yaml´ files.
 
