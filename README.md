@@ -1,21 +1,45 @@
-# Cookiecutter Data Science for VSCode Extension
+# Satellites  kinematic predictions Data Science Workshop
 
-The following template presents an iteration coming from the cookie
+The following repository contains the material for PyDay Workshop.
+It presents the machine learning prediction challenge of
+kinematic trajectory predictions for Satellites in order to avoid
+collisions and Kessler Syndrome.
+
+
+The following repository presents an iteration coming from the cookie
 cutter template and includes the key building blocks for making experiments
-for DVC VSCode extension. 
-
-Some of the cookie cutter template features have been dropped out for
-simplicity.
+for DVC VSCode extension. Some of the cookie cutter template features have 
+been dropped out for simplicity.
 
 
 ### Setup instructions
 
-1. Install DVC VSCode extension from the marketplace. For that, Inside your
-IDE, go to Extensions and search for DVC
-2. Clone this repository 
+1. Clone the repository 
 
-3. Read the documentation and customize the ´dvc.yaml´ , ´params.yaml´ files.
-4. Open a terminal in VSCode
+´git clone https://github.com/iterative/VSCode-DVC-Workshop´
+
+2. Create virtual environment
+
+´pip install virtualenv´
+
+´cd VSCode-DVC-Workshop/
+virtualenv .venv´
+
+3. Install requirements
+
+´pip install requirements.txt´
+
+4. Install DVC VSCode extension from the marketplace. For that, Inside your
+IDE, go to Extensions and search for DVC and click install
+
+(image)
+
+
+
+6. Read the documentation and customize the ´dvc.yaml´ , ´params.yaml´ files.
+7. Open a terminal in VSCode
+
+
 
 
 ### DVC Experiments
