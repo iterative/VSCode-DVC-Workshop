@@ -2,7 +2,7 @@
 
 The following repository contains the material for PyDay Workshop.
 It presents the machine learning prediction challenge of
-kinematic trajectory predictions for Satellites in order to avoid
+kinematic trajectory predictions for Satellites for avoiding
 collisions and Kessler Syndrome.
 
 
@@ -21,9 +21,13 @@ been dropped out for simplicity.
 2. Create virtual environment
 
 ´pip install virtualenv´
-
 ´cd VSCode-DVC-Workshop/
 virtualenv .venv´
+
+OR 
+
+activate existing virtual environment
+´source .venv/bin/activate´
 
 3. Install requirements
 
@@ -34,10 +38,8 @@ IDE, go to Extensions and search for DVC and click install
 
 (image)
 
+5. Read the documentation and customize the ´dvc.yaml´ , ´params.yaml´ files.
 
-
-6. Read the documentation and customize the ´dvc.yaml´ , ´params.yaml´ files.
-7. Open a terminal in VSCode
 
 
 
