@@ -6,6 +6,7 @@ def feature_selection(data, list_column_x, list_column_y):
     """Select features for training and target features"""
     X = data[list_column_x]
     Y = data[list_column_y]
+    print('----FEATURES SELECTED----')
     return X , Y
 
 
@@ -18,6 +19,7 @@ def split_data(X,y, size, state):
     """splits data into training and test set"""
     X_train, X_test, y_train, y_test = train_test_split(
         X, y, test_size=size, random_state=state)
+    print('----DATA SPLITTED----')
     return X_train, X_test, y_train, y_test
 
 
@@ -25,6 +27,7 @@ def standard_scaler(data):
     """Applies a standard classifier"""
     scaler = StandardScaler().fit(data)
     data_transform = scaler.transform(data)
+    print('----DATA SCALED----')
     return data_transform
 
 

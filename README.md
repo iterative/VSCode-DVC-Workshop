@@ -44,7 +44,9 @@ DVC: Setup The Workspace
 
 5. Read the documentation and customize the ´dvc.yaml´ , ´params.yaml´ files.
 
+6. Set python path
 
+export PYTHONPATH='path/VSCode-DVC-Workshop'
 
 
 
