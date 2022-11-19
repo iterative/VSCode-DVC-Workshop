@@ -6,33 +6,37 @@ kinematic trajectory predictions for Satellites for avoiding
 collisions and Kessler Syndrome.
 
 
-The following repository presents an iteration coming from the cookie
-cutter template and includes the key building blocks for making experiments
-for DVC VSCode extension. Some of the cookie cutter template features have 
-been dropped out for simplicity.
+The following repository presents an iteration coming from the cookie cutter template and includes the key building blocks for making experiments for DVC VSCode extension. Some of the cookie cutter template features have been dropped out for simplicity.
 
 
 ### Setup instructions
 
 1. Clone the repository 
 
-´git clone https://github.com/iterative/VSCode-DVC-Workshop´
+```
+git clone https://github.com/iterative/VSCode-DVC-Workshop
+```
 
-2. Create virtual environment. Once created, a popup window might show up
-to select the environment for the workspace. Click yes
+2. Activate existing virtual environment. Once created, a popup window might show up to select the environment for the workspace. Click yes
 
-´pip install virtualenv´
-´cd VSCode-DVC-Workshop/
-virtualenv .venv´
+```
+source .venv/bin/activate
+```
 
-OR 
+You can also create your own virtual environment by
 
-activate existing virtual environment
-´source .venv/bin/activate´
+
+```
+pip install virtualenv
+cd VSCode-DVC-Workshop/
+virtualenv .venv
+```
 
 3. Install requirements
 
-´pip install -r requirements.txt´
+```
+pip install -r requirements.txt
+```
 
 4. Install DVC VSCode extension from the marketplace. For that, Inside your
 IDE, go to Extensions and search for DVC and click install
@@ -40,9 +44,13 @@ IDE, go to Extensions and search for DVC and click install
 (image)
 
 5. Open the Command Palette (F1 or ⇧⌃P on Windows/Linux or ⇧⌘P on macOS) and type
-DVC: Setup The Workspace
+DVC: Setup The Workspace. 
+Select
+* Auto. Use the virtual environment detected automatically by the Python version OR
+* Manuel. Let me select the virtual environment manually. 
 
-5. Read the documentation and customize the ´dvc.yaml´ , ´params.yaml´ files.
+
+5. Read the documentation and customize the `dvc.yaml` , `params.yaml` files.
 
 6. Set python path
 

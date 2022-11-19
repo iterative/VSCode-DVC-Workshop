@@ -1,0 +1,6 @@
+
+
+## Parameters
+
+load:
+  data_path: ExperimentsDVC/data/processed/jan_train.csv
