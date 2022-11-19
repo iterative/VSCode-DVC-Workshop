@@ -1,5 +1,5 @@
 from sklearn.ensemble import RandomForestRegressor
-from src.data.make_dataset import read_data
+from src.data.load_dataset import read_data
 from src.features.feature_engineering import feature_selection , split_data, standard_scaler
 from src.models.model import  RandomForestModel
 ### Defines all the pipeline structure
@@ -13,13 +13,17 @@ with open('params.yaml') as config_file:
     config = yaml.safe_load(config_file)
 
 
-train = read_data(path=)
-test = read_data(path=)
+train = read_data(config['load']['data_path_train'])
+#test = read_data(path=)
 
 X , y = feature_selection
 
-X_train , X_test, y_train, y_test = split_data(X,y, size, state)
+X_train , X_test, y_train, y_test = split_data(X,y, 
+config['splitdata']['size'], 
+config['splitdata']['state'])
 (X_data_transformed) = standard_scaler(X_train)
+
+
 model = RandomForestModel(X_data_transformed,y_train)
 
 
