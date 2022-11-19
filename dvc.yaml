@@ -24,19 +24,21 @@ stages:
     load:
         cmd: scr/data/makeda_dataset.py 
         params:
-        outs: ExperimentsDVC/data/processed
+        outs: ExperimentsDVC/data/interim
 
     featureengineering:
         cmd: scr/data/makedataset.py
         params:
-        deps:
-        outs:
+            - features
+            - labels 
+        deps: scr/data/makeda_dataset.py 
+        outs: 
     
     train:
         cmd: scr/models/train_model.py
         params:
         deps:
-        outs:
+        outs: ExperimentsDVC/data/processed
         metrics:    
 
     evaluate:

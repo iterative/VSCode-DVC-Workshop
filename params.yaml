@@ -5,5 +5,38 @@
 load:
   data_path: ExperimentsDVC/data/processed/jan_train.csv
 
-featureengineering:
-  
+featureselection:
+  data:
+  features:
+    - id
+    - sat_id
+    - x_sim
+    - y_sim
+    - z_sim
+    - Vx_sim
+    - Vy_sim
+    - Vz_sim
+  labels:
+    - x
+    - y
+    - z 
+    - Vx
+    - Vy
+    - Vz
+splitdata:
+  size: 0.33
+  state: 42
+
+standardscaler:
+  data:
+
+trainmodel:
+  data:
+  parameters:
+    - n_estimators: 100
+    - max_depth: 50
+    - min_samples_split:
+    - min_impurity_decrease:
+
+
+
