@@ -22,9 +22,9 @@
 
 stages:
     load:
-        cmd: scr/data/makedataset.py
+        cmd: scr/data/makeda_dataset.py 
         params:
-        outs:
+        outs: ExperimentsDVC/data/processed
 
     featureengineering:
         cmd: scr/data/makedataset.py
