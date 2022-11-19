@@ -22,8 +22,7 @@
 
 stages:
     load:
-        cmd: scr/data/makeda_dataset.py 
-        params:
+        cmd: scr/data/load_dataset.py 
         outs: ExperimentsDVC/data/interim
 
     featureengineering:
@@ -37,6 +36,10 @@ stages:
     train:
         cmd: scr/models/train_model.py
         params:
+            - n_estimators
+            - max_depth
+            - min_samples_split
+            - min_impurity_decrease   
         deps:
         outs: ExperimentsDVC/data/processed
         metrics:    
