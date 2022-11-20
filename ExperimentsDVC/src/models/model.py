@@ -4,11 +4,12 @@ import yaml
 with open('params.yaml') as config_file:
     config = yaml.safe_load(config_file)
 
-def RandomForestModel():
+def RandomForestModel(n_estimators,max_depth,min_samples_split,min_impurity_decrease ):
     """Fits the classifier"""
-    regressor = RandomForestRegressor(config['trainmodel']['parameters']['n_estimators'],
-    max_depth=config['trainmodel']['parameters']['max_depth'],
-    min_samples_split=config['trainmodel']['parameters']['min_samples_split'],
-    min_impurity_decrease=config['trainmodel']['parameters']['min_impurity_decrease'])
+    regressor = RandomForestRegressor(
+        n_estimators = n_estimators,
+        max_depth=max_depth,
+        min_samples_split=min_samples_split,
+        min_impurity_decrease=min_impurity_decrease)
 
     return regressor
