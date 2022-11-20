@@ -22,29 +22,29 @@
 
 stages:
     load:
-        cmd: scr/data/load_dataset.py 
+        cmd: python src/data/load_dataset.py 
         outs: 
         - ExperimentsDVC/data/interim \
 
     featureengineering:
-        cmd: scr/data/feature_engineering.py
+        cmd: python src/features/feature_engineering.py
         params:
-            - features
-            - labels 
+            - featureselection.features
+            - featureselection.labels 
         deps: 
-        - scr/data/load_dataset.py 
+        - src/data/load_dataset.py 
         outs: 
         - ExperimentsDVC/data/processed \
     
     train:
-        cmd: scr/models/train_model.py
+        cmd: python src/models/train_model.py
         params:
-            - n_estimators
-            - max_depth
-            - min_samples_split
-            - min_impurity_decrease   
+            - train.n_estimators
+            - train.max_depth
+            - train.min_samples_split
+            - train.min_impurity_decrease   
         deps: 
-        - scr/data/feature_engineering.py
+        - src/data/feature_engineering.py
         
         metrics:
             - dvclive.json:
