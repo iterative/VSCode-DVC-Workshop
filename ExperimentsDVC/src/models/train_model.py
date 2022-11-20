@@ -16,8 +16,8 @@ with open('params.yaml') as config_file:
 train = read_data(config['load']['data_path_train'])
 #test = read_data(path=)
 
-X , y = feature_selection(config['featureselection']['features'],
-                         config['featureselection']['labels'])
+X , y = feature_selection(config['featureengineering']['features'],
+                         config['featureengineering']['labels'])
 
 X_train , X_test, y_train, y_test = split_data(X,y, 
 config['splitdata']['size'], 
