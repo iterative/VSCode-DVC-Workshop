@@ -5,7 +5,7 @@
 load:
   data_path_train: ExperimentsDVC/data/raw/jan_train.csv
 
-featureengineering:
+featureselection:
   data: ExperimentsDVC/data/raw/jan_train.csv
   features:
     - id
@@ -32,7 +32,7 @@ standardscaler:
 
 train:
   data:
-  params:
+  parameters:
     - n_estimators: 100
     - max_depth: 50
     - min_samples_split: 10
