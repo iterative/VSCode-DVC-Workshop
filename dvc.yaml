@@ -23,15 +23,18 @@
 stages:
     load:
         cmd: scr/data/load_dataset.py 
-        outs: ExperimentsDVC/data/interim
+        outs: 
+        - ExperimentsDVC/data/interim \
 
     featureengineering:
-        cmd: scr/data/makedataset.py
+        cmd: scr/data/feature_engineering.py
         params:
             - features
             - labels 
-        deps: scr/data/makeda_dataset.py 
+        deps: 
+        - scr/data/load_dataset.py 
         outs: 
+        - ExperimentsDVC/data/processed \
     
     train:
         cmd: scr/models/train_model.py
@@ -40,12 +43,10 @@ stages:
             - max_depth
             - min_samples_split
             - min_impurity_decrease   
-        deps:
-        outs: ExperimentsDVC/data/processed
-        metrics:    
-
-    evaluate:
-        cmd: scr/models/predict_model.py
-        params:
-        deps:
-        outs:       
+        deps: 
+        - scr/data/feature_engineering.py
+        
+        metrics:
+            - dvclive.json:
+                cache: false    
+     
