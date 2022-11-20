@@ -5,7 +5,7 @@
 load:
   data_path_train: ExperimentsDVC/data/raw/jan_train.csv
 
-featureselection:
+featureengineering:
   data: ExperimentsDVC/data/raw/jan_train.csv
   features:
     - id

@@ -23,8 +23,6 @@
 stages:
     load:
         cmd: python src/data/load_dataset.py 
-        outs: 
-        - ExperimentsDVC/data/interim \
 
     featureengineering:
         cmd: python scr/features/feature_engineering.py

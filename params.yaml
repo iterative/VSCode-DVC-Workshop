@@ -36,7 +36,7 @@ train:
     - n_estimators: 100
     - max_depth: 50
     - min_samples_split: 10
-    - min_impurity_decrease: 
+    - min_impurity_decrease: 1
 
 
 

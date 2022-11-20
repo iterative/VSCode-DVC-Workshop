@@ -27,7 +27,12 @@ config['splitdata']['state'])
 
 ### Train setup 
 live = Live()
-model = RandomForestModel()
+model = RandomForestModel(
+    n_estimators = config['train']['params']['n_estimators'],
+    max_depth=config['train']['params']['max_depth'],
+    min_samples_split=config['train']['params']['min_samples_split'],
+    min_impurity_decrease=config['train']['params']['min_impurity_decrease'])
+
 
 ## See if FOR loop is necessary for this
 with Live() as live:
