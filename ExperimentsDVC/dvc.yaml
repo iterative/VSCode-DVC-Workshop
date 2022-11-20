@@ -35,7 +35,7 @@ stages:
         - ExperimentsDVC/data/processed \
     
     train:
-        cmd: python scr/models/train_model.py
+        cmd: python src/models/train_model.py
         params:
             - train.n_estimators
             - train.max_depth
