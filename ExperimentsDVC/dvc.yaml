@@ -24,11 +24,11 @@ stages:
     load:
         cmd: python src/data/load_dataset.py 
 
-    featureengineering:
-        cmd: python scr/features/feature_engineering.py
+    featureselection:
+        cmd: python src/features/feature_engineering.py
         params:
-            - features
-            - labels 
+            - featureselection.features
+            - featureselection.labels 
         deps: 
         - src/data/load_dataset.py 
         outs: 
@@ -37,10 +37,10 @@ stages:
     train:
         cmd: python scr/models/train_model.py
         params:
-            - n_estimators
-            - max_depth
-            - min_samples_split
-            - min_impurity_decrease   
+            - train.n_estimators
+            - train.max_depth
+            - train.min_samples_split
+            - train.min_impurity_decrease   
         deps: 
         - src/features/feature_engineering.py
         
