@@ -22,7 +22,7 @@ X_train , X_test, y_train, y_test = split_data(X,y,
 config['splitdata']['size'], 
 config['splitdata']['state'])
 
-(X_data_transformed) = standard_scaler(X_train)
+X_data_transformed = standard_scaler(X_train)
 
 ### Train setup 
 live = Live()
@@ -34,12 +34,12 @@ model = RandomForestModel(
 
 
 ## See if FOR loop is necessary for this
-with Live() as live:
-    print('----TRAINING----')
-    model.fit(X_data_transformed, y_train)
-    live.log_metric("Acc train",model.score(X_data_transformed, y_test))
-    live.log_metric("Acc test", )
-    live.next_step()
+#with Live() as live:
+print('----TRAINING----')
+model.fit(X_data_transformed, y_train)
+live.log_metric("Acc train",model.score(X_data_transformed, y_train))
+live.log_metric("Acc test", )
+live.next_step()
 
 
 
