@@ -22,7 +22,7 @@
 
 stages:
     load:
-        cmd: python src/data/load_dataset.py 
+        cmd: python ExperimentsDVC/src/data/load_dataset.py 
 
     featureselection:
         cmd: python src/features/feature_engineering.py
