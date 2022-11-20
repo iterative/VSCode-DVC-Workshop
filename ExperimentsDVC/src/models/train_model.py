@@ -13,11 +13,10 @@ with open('params.yaml') as config_file:
     config = yaml.safe_load(config_file)
 
 
-train = read_data(config['load']['data_path_train'])
+train_data = read_data(config['load']['data_path_train'])
 #test = read_data(path=)
 
-X , y = feature_selection(config['featureselection']['features'],
-                         config['featureselection']['labels'])
+X , y = feature_selection(train_data,config['featureselection']['features'],config['featureselection']['labels'])
 
 X_train , X_test, y_train, y_test = split_data(X,y, 
 config['splitdata']['size'], 
@@ -28,14 +27,15 @@ config['splitdata']['state'])
 ### Train setup 
 live = Live()
 model = RandomForestModel(
-    n_estimators = config['train']['params']['n_estimators'],
-    max_depth=config['train']['params']['max_depth'],
-    min_samples_split=config['train']['params']['min_samples_split'],
-    min_impurity_decrease=config['train']['params']['min_impurity_decrease'])
+    n_estimators = config['train']['n_estimators'],
+    max_depth=config['train']['max_depth'],
+    min_samples_split=config['train']['min_samples_split'],
+    min_impurity_decrease=config['train']['min_impurity_decrease'])
 
 
 ## See if FOR loop is necessary for this
 with Live() as live:
+    print('----TRAINING----')
     model.fit(X_data_transformed, y_train)
     live.log_metric("Acc train",model.score(X_data_transformed, y_test))
     live.log_metric("Acc test", )

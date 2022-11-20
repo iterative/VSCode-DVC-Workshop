@@ -23,6 +23,7 @@ featureselection:
     - Vx
     - Vy
     - Vz
+    
 splitdata:
   size: 0.33
   state: 42
@@ -31,12 +32,10 @@ standardscaler:
   data:
 
 train:
-  data:
-  parameters:
-    - n_estimators: 100
-    - max_depth: 50
-    - min_samples_split: 10
-    - min_impurity_decrease: 
+  n_estimators: 100
+  max_depth: 50
+  min_samples_split: 10
+  min_impurity_decrease: 1
 
 
 

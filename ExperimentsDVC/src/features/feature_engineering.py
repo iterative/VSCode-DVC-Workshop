@@ -20,11 +20,11 @@ def transform_to_datetime(data, column):
     data[column] = pd.to_datetime(data[column]) 
 
 
-def split_data(X,y):
+def split_data(X,y, size, state):
     """splits data into training and test set"""
     X_train, X_test, y_train, y_test = train_test_split(
-        X, y, test_size=config['splitdata']['size'],
-         random_state=config['splitdata']['state'])
+        X, y, test_size=size,
+         random_state=state)
     print('----DATA SPLITTED----')
     return X_train, X_test, y_train, y_test
 
