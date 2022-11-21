@@ -68,7 +68,7 @@ for a template of how to build your own pipeline with DVC and [here]() to custom
 Visit [our community gem](https://iterative.ai/blog/august-22-community-gems#im-constructing-a-pipeline-with-several-stages-inside-the-dvcyaml-file) 
 as a common FAQ that might take place when executing your pipeline.
 
-For defining [metrics](https://dvc.org/doc/start/experiment-management/experiments#get-started-experiments) we use DVCLive python library. As a starting point we will be using [log_metric()](https://dvc.org/doc/dvclive/api-reference/live/log_metric#livelog_metric) and [sklearn_plot()](https://dvc.org/doc/dvclive/api-reference/live/log_sklearn_plot#livelog_sklearn_plot) methods to set up experiments.
+For defining [metrics](https://dvc.org/doc/start/experiment-management/experiments#get-started-experiments) we use [DVCLive](https://github.com/SoyGema/VSCode-DVC-Experiments-Template) python library. As a starting point we will be using [log_metric()](https://dvc.org/doc/dvclive/api-reference/live/log_metric#livelog_metric) and [sklearn_plot()](https://dvc.org/doc/dvclive/api-reference/live/log_sklearn_plot#livelog_sklearn_plot) methods to set up experiments.
 
 For [experiments](https://dvc.org/doc/start/experiment-management/experiments#get-started-experiments), they can be executed from the CLI or the UI coming from the table. The main CLI command will be using will [`dvc exp run`](https://dvc.org/doc/dvclive/api-reference/live/log_sklearn_plot)
  and [`dvc repro`](https://dvc.org/doc/command-reference/repro#repro) for CLI interface. 
