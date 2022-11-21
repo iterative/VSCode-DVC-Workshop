@@ -60,20 +60,18 @@ export PYTHONPATH='path/VSCode-DVC-Workshop'
 Managing machine learning experiments can be challenging. The ultimate goal
 of DVC OpenSource extension is to make analysis, collaboration and reproducibility easier.
 
-With the extension , we are able to visualize experiments in the table and plots.
+With the extension, we are able to visualize experiments in the table and plots.
 
 For defining [stages](https://dvc.org/doc/user-guide/pipelines/defining-pipelines#defining-pipelines)
-We can use CLI or ´dvc.yaml´ file. Please refer [here]() 
-for a template of how to build you own pipeline with DVC and [here]() to customize your parameters. 
+We can use CLI or `dvc.yaml` file. Please refer [here]() 
+for a template of how to build your own pipeline with DVC and [here]() to customize your parameters. 
 Visit [our community gem](https://iterative.ai/blog/august-22-community-gems#im-constructing-a-pipeline-with-several-stages-inside-the-dvcyaml-file) 
-as a common FAQ that might take place when executing you pipeline.
+as a common FAQ that might take place when executing your pipeline.
 
-For defining [metrics]() we use DVCLive python library. As a starting point we 
-will be using [log_metrics()]() and [sklearn_plots()]() methods to setup experiments
+For defining [metrics](https://dvc.org/doc/start/experiment-management/experiments#get-started-experiments) we use DVCLive python library. As a starting point we will be using [log_metric()](https://dvc.org/doc/dvclive/api-reference/live/log_metric#livelog_metric) and [sklearn_plot()](https://dvc.org/doc/dvclive/api-reference/live/log_sklearn_plot#livelog_sklearn_plot) methods to setup experiments.
 
-For [experiments](), they can be executed from the CLI or the UI coming from
-the table. The main CLI command will be using  will [´dvc exp run´]()
- and [´dvc repro´]() for CLI interface. 
+For [experiments](https://dvc.org/doc/start/experiment-management/experiments#get-started-experiments), they can be executed from the CLI or the UI coming from the table. The main CLI command will be using  will [`dvc exp run`](https://dvc.org/doc/dvclive/api-reference/live/log_sklearn_plot)
+ and [`dvc repro`](https://dvc.org/doc/command-reference/repro#repro) for CLI interface. 
 
 
 
