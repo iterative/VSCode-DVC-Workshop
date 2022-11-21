@@ -50,6 +50,6 @@ stages:
             - dvc.json:
                 cache: false
         plots:
-            - dvclive/plots/metrics:
+            - dvclive/scalars:
                 cache: false    
      
