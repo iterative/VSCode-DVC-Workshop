@@ -37,3 +37,14 @@ def standard_scaler(data):
     return data_transform
 
 
+def delta_time(data, column):
+    """Create Delta columns for daytime"""
+    data['Day'] = data[column].apply(lambda time: time.day)
+    data['Hour'] = data[column].apply(lambda time: time.hour)
+    data['Minute'] = data[column].apply(lambda time: time.minute)
+
+
+
+def drop_column(data, column):
+    """Drop a column from the dataset"""
+    data.drop(['column'], axis=1)

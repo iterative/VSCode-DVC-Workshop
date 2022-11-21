@@ -4,6 +4,7 @@
 
 load:
   data_path_train: ExperimentsDVC/data/raw/jan_train.csv
+  data_path_test: ExperimentsDVC/data/raw/jan_test.csv
 
 featureselection:
   data: ExperimentsDVC/data/raw/jan_train.csv
@@ -16,6 +17,9 @@ featureselection:
     - Vx_sim
     - Vy_sim
     - Vz_sim
+    - Day
+    - Hour
+    - Minute
   labels:
     - x
     - y
