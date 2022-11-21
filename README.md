@@ -63,7 +63,7 @@ of DVC OpenSource extension is to make analysis, collaboration and reproducibili
 With the extension, we are able to visualize experiments in the table and plots.
 
 For defining [stages](https://dvc.org/doc/user-guide/pipelines/defining-pipelines#defining-pipelines)
-We can use CLI or `dvc.yaml` file. Please refer [here]() 
+We can use CLI or `dvc.yaml` file. Please refer [here](https://github.com/SoyGema/VSCode-DVC-Experiments-Template) 
 for a template of how to build your own pipeline with DVC and [here]() to customize your parameters. 
 Visit [our community gem](https://iterative.ai/blog/august-22-community-gems#im-constructing-a-pipeline-with-several-stages-inside-the-dvcyaml-file) 
 as a common FAQ that might take place when executing your pipeline.
