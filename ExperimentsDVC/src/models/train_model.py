@@ -4,7 +4,8 @@ from src.features.feature_engineering import feature_selection ,split_data, stan
 from src.models.model import  RandomForestModel
 ### Defines all the pipeline structure
 import yaml
-from dvclive import Live 
+from dvclive import Live
+import pandas as pd 
 
 # One Stage pipeline. This script will be executed with 'dvc exp run' or 'dvc repro'
 
@@ -46,7 +47,7 @@ model.fit(X_data_transformed, y_train)
 print('----TRAINING DONE----')
 live.log_metric("Acc train",model.score(X_data_transformed, y_train))
 live.log_metric("Acc test", model.score(X_data_transformed_test, y_test))
-live.end()
+live.make_summary()
 
 ### Predictions 
 print('----PREDICTIONS----')
@@ -54,7 +55,7 @@ validation_data = read_data(config['load']['data_path_test'])
 transform_to_datetime(validation_data, 'epoch')
 delta_time(validation_data,'epoch')
 
-validation_data = validation_data.convert_objects(convert_numeric=True)
+validation_data = validation_data.apply(pd.to_numeric, errors='ignore')
 
 X_validation_transformed = standard_scaler(validation_data)
 

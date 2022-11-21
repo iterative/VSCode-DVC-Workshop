@@ -1,5 +1,3 @@
-
-
 ## Parameters
 
 load:
@@ -9,25 +7,24 @@ load:
 featureselection:
   data: ExperimentsDVC/data/raw/jan_train.csv
   features:
-    - id
-    - sat_id
-    - x_sim
-    - y_sim
-    - z_sim
-    - Vx_sim
-    - Vy_sim
-    - Vz_sim
-    - Day
-    - Hour
-    - Minute
+  - id
+  - sat_id
+  - x_sim
+  - y_sim
+  - z_sim
+  - Vx_sim
+  - Vy_sim
+  - Vz_sim
+  - Day
+  - Hour
+  - Minute
   labels:
-    - x
-    - y
-    - z 
-    - Vx
-    - Vy
-    - Vz
-    
+  - x
+  - y
+  - z
+  - Vx
+  - Vy
+  - Vz
 splitdata:
   size: 0.33
   state: 42
@@ -36,7 +33,7 @@ standardscaler:
   data:
 
 train:
-  n_estimators: 100
+  n_estimators: 200
   max_depth: 50
   min_samples_split: 10
   min_impurity_decrease: 1
