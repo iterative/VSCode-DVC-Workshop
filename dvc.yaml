@@ -31,9 +31,6 @@ stages:
             - featureselection.labels 
         deps: 
         - ExperimentsDVC/src/data/load_dataset.py 
-        outs: 
-        - ExperimentsDVC/data/processed/features.csv 
-        - ExperimentsDVC/data/processed/labels.csv
 
     
     train:
