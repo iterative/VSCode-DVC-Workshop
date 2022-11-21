@@ -47,9 +47,9 @@ stages:
         - ExperimentsDVC/src/features/feature_engineering.py
         
         metrics:
-            - dvclive.json:
+            - dvc.json:
                 cache: false
         plots:
-            - dvclive/scalars:
+            - dvclive/plots/metrics:
                 cache: false    
      
