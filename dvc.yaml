@@ -48,5 +48,8 @@ stages:
         
         metrics:
             - dvclive.json:
+                cache: false
+        plots:
+            - dvclive/scalars:
                 cache: false    
      

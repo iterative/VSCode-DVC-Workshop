@@ -8,7 +8,6 @@ from dvclive import Live
 
 # One Stage pipeline. This script will be executed with 'dvc exp run' or 'dvc repro'
 
-
 with open('params.yaml') as config_file:
     config = yaml.safe_load(config_file)
 
@@ -23,6 +22,7 @@ config['splitdata']['size'],
 config['splitdata']['state'])
 
 X_data_transformed = standard_scaler(X_train)
+X_data_transformed_test = standard_scaler(X_test)
 
 ### Train setup 
 live = Live()
@@ -33,20 +33,21 @@ model = RandomForestModel(
     min_impurity_decrease=config['train']['min_impurity_decrease'])
 
 
-## See if FOR loop is necessary for this
+
 #with Live() as live:
 print('----TRAINING----')
 model.fit(X_data_transformed, y_train)
+print('----TRAINING DONE----')
 live.log_metric("Acc train",model.score(X_data_transformed, y_train))
-live.log_metric("Acc test", )
-live.next_step()
+live.log_metric("Acc test", model.score(X_data_transformed_test, y_test))
+#live.next_step()
 
 
 
 
 
-X_data_transformed_test = standard_scaler(X_test)
-model.score(X_data_transformed_test, y_test)
+
+
 
 
 
