@@ -17,19 +17,13 @@ The following repository presents an iteration coming from the cookie cutter tem
 git clone https://github.com/iterative/VSCode-DVC-Workshop
 ```
 
-2. Activate existing virtual environment. Once created, a popup window might show up to select the environment for the workspace. Click yes
-
-```
-source .venv/bin/activate
-```
-
-You can also create your own virtual environment by
+2. Create virtual environment. Once created, a popup window might show up to select the environment for the workspace. Click yes
 
 
 ```
 pip install virtualenv
 cd VSCode-DVC-Workshop/
-virtualenv .venv
+virtualenv venv
 ```
 
 3. Install requirements
@@ -50,9 +44,11 @@ Select
 * Manuel. Let me select the virtual environment manually. 
 
 
-5. Read the documentation and customize the `dvc.yaml` , `params.yaml` files.
+6. Have a look at the [Notebook](https://github.com/iterative/VSCode-DVC-Workshop/blob/main/ExperimentsDVC/notebooks/Satellites_orbit_trajectory.ipynb) and learn more about the challenge we will track
 
-6. Set python path
+6. Read the documentation and customize the `dvc.yaml` , `params.yaml` files.
+
+7. Set python path
 
 export PYTHONPATH='path/VSCode-DVC-Workshop'
 
