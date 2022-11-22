@@ -17,7 +17,7 @@ The following repository presents an iteration coming from the cookie cutter tem
 git clone https://github.com/iterative/VSCode-DVC-Workshop
 ```
 
-2. Create virtual environment. Once created, a popup window might show up to select the environment for the workspace. Click yes
+2. Create a virtual environment. Once created, a pop-up window might show up to select the environment for the workspace. Click yes.
 
 
 ```
@@ -26,14 +26,16 @@ cd VSCode-DVC-Workshop/
 virtualenv venv
 ```
 
+If the pop-up window doesn't show, use `source venv/bin/activate` to activate the virtualenv.
+
 3. Install requirements
 
 ```
 pip install -r requirements.txt
 ```
 
-4. Install DVC VSCode extension from the marketplace. For that, Inside your
-IDE, go to Extensions and search for DVC and click install
+4. Install the [DVC VSCode extension from the marketplace](https://marketplace.visualstudio.com/items?itemName=Iterative.dvc). 
+For that, inside your IDE, go to Extensions and search for DVC and click install
 
 (image)
 
@@ -41,7 +43,7 @@ IDE, go to Extensions and search for DVC and click install
 DVC: Setup The Workspace. 
 Select
 * Auto. Use the virtual environment detected automatically by the Python version OR
-* Manuel. Let me select the virtual environment manually. 
+* Manual. Let me select the virtual environment manually. 
 
 
 6. Have a look at the [Notebook](https://github.com/iterative/VSCode-DVC-Workshop/blob/main/ExperimentsDVC/notebooks/Satellites_orbit_trajectory.ipynb) and learn more about the challenge we will track
