@@ -1,6 +1,6 @@
 # Satellites  kinematic predictions Data Science Workshop
 
-The following repository contains the material for PyDay BCN Workshop.
+The following repository contains the material for [PyDay BCN Workshop](https://pybcn.org/events/pyday_bcn/pyday_bcn_2022/#agenda_section).
 It presents the machine learning prediction challenge of
 kinematic trajectory predictions for Satellites for avoiding
 collisions and Kessler Syndrome.
