@@ -48,7 +48,7 @@ Select
 
 6. Have a look at the [Notebook](https://github.com/iterative/VSCode-DVC-Workshop/blob/main/ExperimentsDVC/notebooks/Satellites_orbit_trajectory.ipynb) and learn more about the challenge we will track
 
-6. Read the documentation and customize the `dvc.yaml` , `params.yaml` files.
+6. Read the [DVC documentation](https://dvc.org/doc) and customize the `dvc.yaml` , `params.yaml` files.
 
 7. Set python path
 
