@@ -59,7 +59,7 @@ validation_data = validation_data.apply(pd.to_numeric, errors='ignore')
 
 X_validation_transformed = standard_scaler(validation_data)
 
-print(model.predict(X_validation_transformed[0]))
+print(model.predict(X_validation_transformed))
 
 
 

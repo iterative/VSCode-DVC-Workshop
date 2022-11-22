@@ -1,6 +1,6 @@
 # Satellites  kinematic predictions Data Science Workshop
 
-The following repository contains the material for PyDay Workshop.
+The following repository contains the material for PyDay BCN Workshop.
 It presents the machine learning prediction challenge of
 kinematic trajectory predictions for Satellites for avoiding
 collisions and Kessler Syndrome.
@@ -58,9 +58,9 @@ export PYTHONPATH='path/VSCode-DVC-Workshop'
 ------------
 
 Managing machine learning experiments can be challenging. The ultimate goal
-of DVC OpenSource extension is to make analysis, collaboration and reproducibility easier.
+of [DVC](https://github.com/iterative/vscode-dvc) OpenSource extension for VSCode is to make analysis, collaboration and reproducibility easier.
 
-With the extension, we are able to visualize experiments in the table and plots.
+With the extension, we are able to visualize experiments in the table and plots, analyze them and persist them.
 
 For defining [stages](https://dvc.org/doc/user-guide/pipelines/defining-pipelines#defining-pipelines)
 We can use CLI or `dvc.yaml` file. Please refer [here](https://github.com/SoyGema/VSCode-DVC-Experiments-Template) 
