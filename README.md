@@ -52,8 +52,9 @@ Select
 
 7. Set python path
 
+```
 export PYTHONPATH='path/VSCode-DVC-Workshop'
-
+```
 
 
 ### DVC Experiments
