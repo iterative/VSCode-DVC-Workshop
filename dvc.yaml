@@ -37,6 +37,7 @@ stages:
         cmd: python  ExperimentsDVC/src/models/train_model.py
         params:
             - train.n_estimators
+            - train.max_samples
             - train.max_depth
             - train.min_samples_split
             - train.min_impurity_decrease   

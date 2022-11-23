@@ -34,6 +34,7 @@ standardscaler:
 
 train:
   n_estimators: 150
+  max_samples: 5000
   max_depth: 25
   min_samples_split: 10
   min_impurity_decrease: 1

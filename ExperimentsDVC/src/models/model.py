@@ -6,7 +6,8 @@ with open('params.yaml') as config_file:
 
 def RandomForestModel(n_estimators,max_depth,min_samples_split,min_impurity_decrease ):
     """Fits the classifier"""
-    regressor = RandomForestRegressor(
+    regressor = RandomForestRegressor( bootstrap=True,
+        max_samples= max_samples,
         n_estimators = n_estimators,
         max_depth=max_depth,
         min_samples_split=min_samples_split,
