@@ -1,6 +1,6 @@
 # Satellites  kinematic predictions Data Science Workshop
 
-The following repository contains the material for PyDay BCN Workshop.
+The following repository contains the material for [PyDay BCN Workshop](https://pybcn.org/events/pyday_bcn/pyday_bcn_2022/#agenda_section).
 It presents the machine learning prediction challenge of
 kinematic trajectory predictions for Satellites for avoiding
 collisions and Kessler Syndrome.
@@ -17,7 +17,7 @@ The following repository presents an iteration coming from the cookie cutter tem
 git clone https://github.com/iterative/VSCode-DVC-Workshop
 ```
 
-2. Create virtual environment. Once created, a popup window might show up to select the environment for the workspace. Click yes
+2. Create a virtual environment. Once created, a pop-up window might show up to select the environment for the workspace. Click yes.
 
 
 ```
@@ -26,14 +26,16 @@ cd VSCode-DVC-Workshop/
 virtualenv venv
 ```
 
+If the pop-up window doesn't show, use `source venv/bin/activate` to activate the virtualenv.
+
 3. Install requirements
 
 ```
 pip install -r requirements.txt
 ```
 
-4. Install DVC VSCode extension from the marketplace. For that, Inside your
-IDE, go to Extensions and search for DVC and click install
+4. Install the [DVC VSCode extension from the marketplace](https://marketplace.visualstudio.com/items?itemName=Iterative.dvc). 
+For that, inside your IDE, go to Extensions and search for DVC and click install
 
 (image)
 
@@ -41,29 +43,29 @@ IDE, go to Extensions and search for DVC and click install
 DVC: Setup The Workspace. 
 Select
 * Auto. Use the virtual environment detected automatically by the Python version OR
-* Manuel. Let me select the virtual environment manually. 
+* Manual. Let me select the virtual environment manually. 
 
 
 6. Have a look at the [Notebook](https://github.com/iterative/VSCode-DVC-Workshop/blob/main/ExperimentsDVC/notebooks/Satellites_orbit_trajectory.ipynb) and learn more about the challenge we will track
 
-6. Read the documentation and customize the `dvc.yaml` , `params.yaml` files.
+6. Read the [DVC documentation](https://dvc.org/doc) and customize the `dvc.yaml` , `params.yaml` files.
 
 7. Set python path
 
+```
 export PYTHONPATH='path/VSCode-DVC-Workshop'
-
+```
 
 
 ### DVC Experiments
 ------------
 
 Managing machine learning experiments can be challenging. The ultimate goal
-of [DVC](https://github.com/iterative/vscode-dvc) OpenSource extension for VSCode is to make analysis, collaboration and reproducibility easier.
+of the open-source [DVC](https://github.com/iterative/vscode-dvc) extension for VSCode is to make analysis, collaboration and reproducibility easier.
 
 With the extension, we are able to visualize experiments in the table and plots, analyze them and persist them.
 
-For defining [stages](https://dvc.org/doc/user-guide/pipelines/defining-pipelines#defining-pipelines)
-We can use CLI or `dvc.yaml` file. Please refer [here](https://github.com/SoyGema/VSCode-DVC-Experiments-Template) 
+For defining [stages](https://dvc.org/doc/user-guide/pipelines/defining-pipelines#defining-pipelines), we can use CLI or `dvc.yaml` file. Please refer [here](https://github.com/SoyGema/VSCode-DVC-Experiments-Template) 
 for a template of how to build your own pipeline with DVC and [here]() to customize your parameters. 
 Visit [our community gem](https://iterative.ai/blog/august-22-community-gems#im-constructing-a-pipeline-with-several-stages-inside-the-dvcyaml-file) 
 as a common FAQ that might take place when executing your pipeline.
@@ -71,7 +73,7 @@ as a common FAQ that might take place when executing your pipeline.
 For defining [metrics](https://dvc.org/doc/start/experiment-management/experiments#get-started-experiments) we use [DVCLive](https://github.com/SoyGema/VSCode-DVC-Experiments-Template) python library. As a starting point we will be using [log_metric()](https://dvc.org/doc/dvclive/api-reference/live/log_metric#livelog_metric) and [sklearn_plot()](https://dvc.org/doc/dvclive/api-reference/live/log_sklearn_plot#livelog_sklearn_plot) methods to set up experiments.
 
 For [experiments](https://dvc.org/doc/start/experiment-management/experiments#get-started-experiments), they can be executed from the CLI or the UI coming from the table. The main CLI command will be using will [`dvc exp run`](https://dvc.org/doc/dvclive/api-reference/live/log_sklearn_plot)
- and [`dvc repro`](https://dvc.org/doc/command-reference/repro#repro) for CLI interface. 
+ and [`dvc repro`](https://dvc.org/doc/command-reference/repro#repro) for CLI. 
 
 
 
