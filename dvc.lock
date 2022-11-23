@@ -2,3 +2,51 @@ schema: '2.0'
 stages:
   load:
     cmd: python ExperimentsDVC/src/data/load_dataset.py
+  featureselection:
+    cmd: python ExperimentsDVC/src/features/feature_selection.py
+    deps:
+    - path: ExperimentsDVC/src/data/load_dataset.py
+      md5: 1fabc3ce451d129859d8130262485c2c
+      size: 298
+    params:
+      params.yaml:
+        featureselection.features:
+        - id
+        - sat_id
+        - x_sim
+        - y_sim
+        - z_sim
+        - Vx_sim
+        - Vy_sim
+        - Vz_sim
+        - Day
+        - Hour
+        - Minute
+        featureselection.labels:
+        - x
+        - y
+        - z
+        - Vx
+        - Vy
+        - Vz
+  train:
+    cmd: python  ExperimentsDVC/src/models/train_model.py
+    deps:
+    - path: ExperimentsDVC/src/features/feature_engineering.py
+      md5: 41d4a4111b6fd568c8a26f659395a0a6
+      size: 1443
+    params:
+      params.yaml:
+        train.max_depth: 30
+        train.max_samples: 200000
+        train.min_impurity_decrease: 0.2
+        train.min_samples_split: 10
+        train.n_estimators: 100
+    outs:
+    - path: dvclive/metrics.json
+      md5: 19555ff44e0e5485caff9d6111ebf27f
+      size: 75
+    - path: dvclive/plots
+      md5: 48e17655db9892c2429e32b92c729674.dir
+      size: 71
+      nfiles: 2
