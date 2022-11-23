@@ -8,6 +8,24 @@ collisions and Kessler Syndrome.
 
 The following repository presents an iteration coming from the cookie cutter template and includes the key building blocks for making experiments for DVC VSCode extension. Some of the cookie cutter template features have been dropped out for simplicity.
 
+### DVC Experiments
+------------
+
+Managing machine learning experiments can be challenging. The ultimate goal
+of the open-source [DVC](https://github.com/iterative/vscode-dvc) extension for VSCode is to make analysis, collaboration and reproducibility easier.
+
+With the extension, we are able to visualize experiments in the table and plots, analyze them and persist them.
+
+For defining [stages](https://dvc.org/doc/user-guide/pipelines/defining-pipelines#defining-pipelines), we can use CLI or `dvc.yaml` file. Please refer [here](https://github.com/SoyGema/VSCode-DVC-Experiments-Template) 
+for a template of how to build your own pipeline with DVC and [here]() to customize your parameters. 
+Visit [our community gem](https://iterative.ai/blog/august-22-community-gems#im-constructing-a-pipeline-with-several-stages-inside-the-dvcyaml-file) 
+as a common FAQ that might take place when executing your pipeline.
+
+For defining [metrics](https://dvc.org/doc/start/experiment-management/experiments#get-started-experiments) we use [DVCLive](https://github.com/SoyGema/VSCode-DVC-Experiments-Template) python library. As a starting point we will be using [log_metric()](https://dvc.org/doc/dvclive/api-reference/live/log_metric#livelog_metric) and [sklearn_plot()](https://dvc.org/doc/dvclive/api-reference/live/log_sklearn_plot#livelog_sklearn_plot) methods to set up experiments.
+
+For [experiments](https://dvc.org/doc/start/experiment-management/experiments#get-started-experiments), they can be executed from the CLI or the UI coming from the table. The main CLI command will be using will [`dvc exp run`](https://dvc.org/doc/dvclive/api-reference/live/log_sklearn_plot)
+ and [`dvc repro`](https://dvc.org/doc/command-reference/repro#repro) for CLI. 
+
 
 ### Setup instructions
 
@@ -55,26 +73,6 @@ Select
 ```
 export PYTHONPATH='path/VSCode-DVC-Workshop'
 ```
-
-
-### DVC Experiments
-------------
-
-Managing machine learning experiments can be challenging. The ultimate goal
-of the open-source [DVC](https://github.com/iterative/vscode-dvc) extension for VSCode is to make analysis, collaboration and reproducibility easier.
-
-With the extension, we are able to visualize experiments in the table and plots, analyze them and persist them.
-
-For defining [stages](https://dvc.org/doc/user-guide/pipelines/defining-pipelines#defining-pipelines), we can use CLI or `dvc.yaml` file. Please refer [here](https://github.com/SoyGema/VSCode-DVC-Experiments-Template) 
-for a template of how to build your own pipeline with DVC and [here]() to customize your parameters. 
-Visit [our community gem](https://iterative.ai/blog/august-22-community-gems#im-constructing-a-pipeline-with-several-stages-inside-the-dvcyaml-file) 
-as a common FAQ that might take place when executing your pipeline.
-
-For defining [metrics](https://dvc.org/doc/start/experiment-management/experiments#get-started-experiments) we use [DVCLive](https://github.com/SoyGema/VSCode-DVC-Experiments-Template) python library. As a starting point we will be using [log_metric()](https://dvc.org/doc/dvclive/api-reference/live/log_metric#livelog_metric) and [sklearn_plot()](https://dvc.org/doc/dvclive/api-reference/live/log_sklearn_plot#livelog_sklearn_plot) methods to set up experiments.
-
-For [experiments](https://dvc.org/doc/start/experiment-management/experiments#get-started-experiments), they can be executed from the CLI or the UI coming from the table. The main CLI command will be using will [`dvc exp run`](https://dvc.org/doc/dvclive/api-reference/live/log_sklearn_plot)
- and [`dvc repro`](https://dvc.org/doc/command-reference/repro#repro) for CLI. 
-
 
 
 ### The resulting directory structure
