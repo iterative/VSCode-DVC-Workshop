@@ -71,7 +71,7 @@ Select
 7. Set python path.
 
 ```
-export PYTHONPATH="$path/VSCode-DVC-Workshop"
+export PYTHONPATH="$path/VSCode-DVC-Workshop/"
 ```
 
 
