@@ -1,7 +1,16 @@
+import sys
+from pathlib import Path
+
+src_path = Path(__file__).parent.parent.resolve()
+sys.path.append(str(src_path))
+
+
+
 from sklearn.ensemble import RandomForestRegressor
-from src.data.load_dataset import read_data
-from src.features.feature_engineering import feature_selection ,split_data, standard_scaler , delta_time , transform_to_datetime
-from src.models.model import  RandomForestModel
+from data.load_dataset import read_data
+from features.feature_engineering import feature_selection ,split_data, standard_scaler , delta_time , transform_to_datetime
+from models.model import  RandomForestModel
+from sklearn.metrics import mean_squared_error
 ### Defines all the pipeline structure
 import yaml
 from dvclive import Live
@@ -14,11 +23,11 @@ import pandas as pd
 
 ####----------------######
 
-import sys
-from pathlib import Path
+#import sys
+#from pathlib import Path
 
-src_path = Path(__file__).parent.parent.resolve()
-sys.path.append(str(src_path))
+#src_path = Path(__file__).parent.parent.resolve()
+#sys.path.append(str(src_path))
 
 ####----------------######
 
@@ -60,8 +69,14 @@ model = RandomForestModel(
 print('----TRAINING----')
 model.fit(X_data_transformed, y_train)
 print('----TRAINING DONE----')
+
+
+prediction = model.predict(X_data_transformed_test) 
+mse = mean_squared_error(y_test, prediction)
+
 live.log_metric("Acc train",model.score(X_data_transformed, y_train))
 live.log_metric("Acc test", model.score(X_data_transformed_test, y_test))
+live.log_metric("Mean Square error", mse)
 live.make_summary()
 
 ### Predictions 

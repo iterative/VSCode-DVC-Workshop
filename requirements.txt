@@ -90,3 +90,4 @@ webencodings==0.5.1
 websocket-client==1.4.2
 zipp==3.10.0
 dvc==2.34.2
+dvc-s3==2.21.0

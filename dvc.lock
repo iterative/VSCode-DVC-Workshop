@@ -38,15 +38,15 @@ stages:
     params:
       params.yaml:
         train.max_depth: 30
-        train.max_samples: 200000
+        train.max_samples: 2000
         train.min_impurity_decrease: 0.2
         train.min_samples_split: 10
-        train.n_estimators: 100
+        train.n_estimators: 150
     outs:
     - path: dvclive/metrics.json
-      md5: 19555ff44e0e5485caff9d6111ebf27f
-      size: 75
+      md5: 7edc661c7d17870807ea8cdb17607a6b
+      size: 119
     - path: dvclive/plots
-      md5: 48e17655db9892c2429e32b92c729674.dir
-      size: 71
-      nfiles: 2
+      md5: c170e976a46c73680b1aa18d14be3d7c.dir
+      size: 114
+      nfiles: 3

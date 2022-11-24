@@ -68,10 +68,10 @@ Select
 
 6. Read the [DVC documentation](https://dvc.org/doc) and customize the `dvc.yaml` , `params.yaml` files.
 
-7. Set python path
+7. Set python path.
 
 ```
-export PYTHONPATH='path/VSCode-DVC-Workshop'
+export PYTHONPATH="$path/VSCode-DVC-Workshop"
 ```
 
 
