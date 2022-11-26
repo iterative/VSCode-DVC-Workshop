@@ -33,11 +33,11 @@ standardscaler:
   data:
 
 train:
-  n_estimators: 150
-  max_samples: 20000
-  max_depth: 30
-  min_samples_split: 10
-  min_impurity_decrease: 0.1
+  n_estimators: 500
+  max_samples: 2000
+  max_depth: 150
+  min_samples_split: 50
+  min_impurity_decrease: 0.05
 
 
 

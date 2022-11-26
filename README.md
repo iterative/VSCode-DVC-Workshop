@@ -42,7 +42,6 @@ git clone https://github.com/iterative/VSCode-DVC-Workshop
 pip install virtualenv
 cd VSCode-DVC-Workshop/
 virtualenv venv
-source venv/bin/activate 
 ```
 
 If the pop-up window doesn't show, use `source venv/bin/activate` to activate the virtualenv.
