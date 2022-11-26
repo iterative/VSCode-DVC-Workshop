@@ -47,4 +47,4 @@ def delta_time(data, column):
 
 def drop_column(data, column):
     """Drop a column from the dataset"""
-    data.drop(['column'], axis=1)
+    data.drop([column], axis=1)
