@@ -5,7 +5,7 @@ load:
   data_path_test: ExperimentsDVC/dataset/jan_test.csv
 
 featureselection:
-  data: ExperimentsDVC/data/raw/jan_train.csv
+  data: ExperimentsDVC/dataset/jan_train.csv
   features:
   - id
   - sat_id
@@ -33,8 +33,8 @@ standardscaler:
   data:
 
 train:
-  n_estimators: 500
-  max_samples: 2000
+  n_estimators: 350
+  max_samples: 300000
   max_depth: 150
   min_samples_split: 50
   min_impurity_decrease: 0.05
