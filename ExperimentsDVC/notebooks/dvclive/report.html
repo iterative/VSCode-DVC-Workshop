@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="refresh" content="5">
+    <title>DVC Plot</title>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.18.2"></script>
+    
+    <style>
+        table {
+            border-spacing: 15px;
+        }
+    </style>
+</head>
+<body>
+    
+        <div id="metrics_json" style="text-align: center; padding: 10x">
+            <p>metrics_json</p>
+            <div style="display: flex;justify-content: center;">
+                <table>
+<thead>
+<tr><th style="text-align: right;">  Acc train</th><th style="text-align: right;">  Mean Square error</th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: right;">   0.859357</td><td style="text-align: right;">        1.57582e+07</td></tr>
+</tbody>
+</table>
+            </div>
+        </div>
+
+    <div id = "static_Acc_train">
+        <script type = "text/javascript">
+            var spec = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+        "values": [
+    {
+        "Acc train": "0.8593567842205271",
+        "rev": "workspace",
+        "step": "0"
+    }
+]
+    },
+    "title": "",
+    "width": 300,
+    "height": 300,
+    "layer": [
+        {
+            "encoding": {
+                "x": {
+                    "field": "step",
+                    "type": "quantitative",
+                    "title": "step"
+                },
+                "y": {
+                    "field": "Acc train",
+                    "type": "quantitative",
+                    "title": "Acc train",
+                    "scale": {
+                        "zero": false
+                    }
+                },
+                "color": {
+                    "field": "rev",
+                    "type": "nominal"
+                },
+                "tooltip": [
+                    {
+                        "field": "step",
+                        "type": "quantitative"
+                    },
+                    {
+                        "field": "Acc train",
+                        "type": "quantitative"
+                    },
+                    {
+                        "field": "rev",
+                        "type": "nominal"
+                    }
+                ]
+            },
+            "layer": [
+                {
+                    "mark": "line"
+                },
+                {
+                    "transform": [
+                        {
+                            "filter": {
+                                "param": "hover",
+                                "empty": false
+                            }
+                        }
+                    ],
+                    "mark": "circle"
+                },
+                {
+                    "mark": "rule",
+                    "params": [
+                        {
+                            "name": "hover",
+                            "select": {
+                                "type": "point",
+                                "on": "mouseover",
+                                "nearest": true
+                            }
+                        }
+                    ],
+                    "encoding": {
+                        "color": {
+                            "condition": {
+                                "param": "hover",
+                                "empty": false,
+                                "value": "1"
+                            },
+                            "value": "transparent"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
+;
+            vegaEmbed('#static_Acc_train', spec);
+        </script>
+    </div>
+    
+
+    <div id = "static_Mean_Square_error">
+        <script type = "text/javascript">
+            var spec = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+        "values": [
+    {
+        "Mean Square error": "15758210.459832938",
+        "rev": "workspace",
+        "step": "0"
+    }
+]
+    },
+    "title": "",
+    "width": 300,
+    "height": 300,
+    "layer": [
+        {
+            "encoding": {
+                "x": {
+                    "field": "step",
+                    "type": "quantitative",
+                    "title": "step"
+                },
+                "y": {
+                    "field": "Mean Square error",
+                    "type": "quantitative",
+                    "title": "Mean Square error",
+                    "scale": {
+                        "zero": false
+                    }
+                },
+                "color": {
+                    "field": "rev",
+                    "type": "nominal"
+                },
+                "tooltip": [
+                    {
+                        "field": "step",
+                        "type": "quantitative"
+                    },
+                    {
+                        "field": "Mean Square error",
+                        "type": "quantitative"
+                    },
+                    {
+                        "field": "rev",
+                        "type": "nominal"
+                    }
+                ]
+            },
+            "layer": [
+                {
+                    "mark": "line"
+                },
+                {
+                    "transform": [
+                        {
+                            "filter": {
+                                "param": "hover",
+                                "empty": false
+                            }
+                        }
+                    ],
+                    "mark": "circle"
+                },
+                {
+                    "mark": "rule",
+                    "params": [
+                        {
+                            "name": "hover",
+                            "select": {
+                                "type": "point",
+                                "on": "mouseover",
+                                "nearest": true
+                            }
+                        }
+                    ],
+                    "encoding": {
+                        "color": {
+                            "condition": {
+                                "param": "hover",
+                                "empty": false,
+                                "value": "1"
+                            },
+                            "value": "transparent"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
+;
+            vegaEmbed('#static_Mean_Square_error', spec);
+        </script>
+    </div>
+    
+</body>
+</html>

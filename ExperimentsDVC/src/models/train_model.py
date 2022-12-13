@@ -18,19 +18,6 @@ import pandas as pd
 
 # One Stage pipeline. This script will be executed with 'dvc exp run' or 'dvc repro'
 
-##### FIX THE TABLE ISSUE ? ? ? 
-
-
-####----------------######
-
-#import sys
-#from pathlib import Path
-
-#src_path = Path(__file__).parent.parent.resolve()
-#sys.path.append(str(src_path))
-
-####----------------######
-
 
 with open('params.yaml') as config_file:
     config = yaml.safe_load(config_file)

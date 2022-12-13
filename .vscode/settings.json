@@ -1,4 +1,3 @@
 {
-    "diffEditor.maxFileSize": 500,
-    "dvc.pythonPath": "/Users/gema/miniforge3/bin/python3.9"
+    "diffEditor.maxFileSize": 500
 }
