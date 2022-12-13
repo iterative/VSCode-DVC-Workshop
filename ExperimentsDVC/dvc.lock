@@ -1,4 +1,0 @@
-schema: '2.0'
-stages:
-  load:
-    cmd: python src/data/load_dataset.py
