@@ -35,7 +35,7 @@ For [experiments](https://dvc.org/doc/start/experiment-management/experiments#ge
 git clone https://github.com/iterative/VSCode-DVC-Workshop
 ```
 
-2. Download the data. Inside the project folder ExperimentsDVC. This action will create a
+2. Download the data. Inside the project folder ExperimentsDVC/dataset. This action will create a
    folder inside the project called satellite-data containing the dataset.
 
 ```
