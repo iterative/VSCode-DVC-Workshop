@@ -1,11 +1,11 @@
 ## Parameters
 
 load:
-  data_path_train: ExperimentsDVC/dataset/jan_train.csv
-  data_path_test: ExperimentsDVC/dataset/jan_test.csv
+  data_path_train: ExperimentsDVC/dataset/satellite-data/jan_train.csv
+  data_path_test: ExperimentsDVC/dataset/satellite-data/jan_test.csv
 
 featureselection:
-  data: ExperimentsDVC/dataset/jan_train.csv
+  data: ExperimentsDVC/dataset/satellite-data/jan_train.csv
   features:
   - id
   - sat_id
