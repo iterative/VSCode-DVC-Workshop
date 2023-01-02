@@ -35,6 +35,14 @@ For [experiments](https://dvc.org/doc/start/experiment-management/experiments#ge
 git clone https://github.com/iterative/VSCode-DVC-Workshop
 ```
 
+2. Download the data. Inside the project folder path. This action will create a
+   folder inside the project called satellite-data containing the dataset.
+
+```
+dvc get https://github.com/iterative/dataset-registry \
+          workshop/satellite-data/
+```
+
 2. Create a virtual environment. Once created, a pop-up window might show up to select the environment for the workspace. Click yes.
 
 
