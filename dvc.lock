@@ -33,20 +33,20 @@ stages:
     cmd: python  ExperimentsDVC/src/models/train_model.py
     deps:
     - path: ExperimentsDVC/src/features/feature_engineering.py
-      md5: 41d4a4111b6fd568c8a26f659395a0a6
-      size: 1443
+      md5: 0afbdc1d10aa6bc1f4c6f2b9d8129d9b
+      size: 1441
     params:
       params.yaml:
-        train.max_depth: 35
-        train.max_samples: 2000
+        train.max_depth: 150
+        train.max_samples: 300000
         train.min_impurity_decrease: 0.05
-        train.min_samples_split: 100
-        train.n_estimators: 500
+        train.min_samples_split: 50
+        train.n_estimators: 350
     outs:
     - path: dvclive/metrics.json
-      md5: 4c12b085a92d6ce42c9112e81b96cf51
-      size: 121
+      md5: 3a8777e369ccf467333de3c2cd7ec752
+      size: 119
     - path: dvclive/plots
-      md5: 87ce7da7659417e396cd1d610583ed83.dir
-      size: 116
+      md5: 3fb3c544944620cba294307cbd3f557b.dir
+      size: 114
       nfiles: 3
