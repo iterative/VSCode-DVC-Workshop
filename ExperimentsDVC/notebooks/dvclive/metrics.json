@@ -1,4 +1,9 @@
 {
+<<<<<<< Updated upstream
     "Acc train": 0.7648580695988595,
     "Mean Square error": 21650313.737479936
+=======
+    "Acc train": 0.8597130385277393,
+    "Mean Square error": 15709391.16308351
+>>>>>>> Stashed changes
 }
