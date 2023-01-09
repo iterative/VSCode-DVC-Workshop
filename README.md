@@ -1,12 +1,16 @@
 # Satellites  kinematic predictions Data Science Workshop
 
-The following repository contains the material for [PyDay BCN Workshop](https://pybcn.org/events/pyday_bcn/pyday_bcn_2022/#agenda_section).
+The following repository contains the material for 
+[PyDay BCN Workshop](https://pybcn.org/events/pyday_bcn/pyday_bcn_2022/#agenda_section).
 It presents the machine learning prediction challenge of
 kinematic trajectory predictions for Satellites for avoiding
 collisions and Kessler Syndrome.
 
 
-The following repository presents an iteration coming from the cookie cutter template and includes the key building blocks for making experiments for DVC VSCode extension. Some of the cookie cutter template features have been dropped out for simplicity.
+The following repository presents an iteration coming from the cookie cutter
+template and includes the key building blocks for making experiments for DVC
+VSCode extension. 
+Some of the cookie cutter template features have been dropped out for simplicity.
 
 ### DVC Experiments
 ------------
@@ -14,7 +18,28 @@ The following repository presents an iteration coming from the cookie cutter tem
 Managing machine learning experiments can be challenging. The ultimate goal
 of the open-source [DVC](https://github.com/iterative/vscode-dvc) extension for VSCode is to make analysis, collaboration and reproducibility easier.
 
-With the extension, we are able to visualize experiments in the table and plots, analyze them and persist them.
+With the extension, we are able to visualize experiments in the table and plots,
+analyze them and persist them.
+There are two main manners experiments can be conducted with the material
+presented in the repository: through fast experiment tracking with a jupyter
+notebook and thanks to dvc pipelines
+
+#### Fast experiment tracking with DVCLive
+
+You can follow the blogpost to know more about DVCLive release . 
+If you want to conduct experiments directly from your notebook, please follow
+ the instructions above:
+
+```
+git clone https://github.com/iterative/VSCode-DVC-Workshop
+git checkout dvcLiveexp
+```
+Activate the virtual environment and configure your Python correctly. Then go to
+`notebooks > Statistical Distribution Datasets.ipynb` and run all cells.
+
+Go then to the extension and select Show experiments
+
+#### Experiment tracking with DVC Pipelines
 
 For defining [stages](https://dvc.org/doc/user-guide/pipelines/defining-pipelines#defining-pipelines), we can use CLI or `dvc.yaml` file. Please refer [here](https://github.com/SoyGema/VSCode-DVC-Experiments-Template) 
 for a template of how to build your own pipeline with DVC and [here]() to customize your parameters. 
