@@ -16,7 +16,7 @@ cycler==0.11.0
 dvc==2.37.0
 dvc-data==0.28.4
 dvc-http==2.27.2
-dvc-objects==0.14.0
+dvc-objects==0.16.0
 dvc-render==0.0.15
 dvc-s3==2.21.0
 dvc-studio-client==0.3.0
