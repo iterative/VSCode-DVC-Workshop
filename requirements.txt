@@ -14,7 +14,7 @@ charset-normalizer==2.1.1
 contourpy==1.0.6
 cycler==0.11.0
 dvc==2.37.0
-dvc-data==0.28.4
+dvc-data==0.32.0
 dvc-http==2.27.2
 dvc-objects==0.14.0
 dvc-render==0.0.15
