@@ -15,7 +15,7 @@ contourpy==1.0.7
 cycler==0.11.0
 dvc==2.37.0
 dvc-data==0.34.0
-dvc-http==2.27.2
+dvc-http==2.30.0
 dvc-objects==0.18.1
 dvc-render==0.0.17
 dvc-s3==2.21.0
