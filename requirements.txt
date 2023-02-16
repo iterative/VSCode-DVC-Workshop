@@ -13,7 +13,7 @@ cffi==1.15.1
 charset-normalizer==2.1.1
 contourpy==1.0.7
 cycler==0.11.0
-dvc==2.44.0
+dvc==2.45.0
 dvc-data==0.37.3
 dvc-http==2.30.1
 dvc-objects==0.19.3
