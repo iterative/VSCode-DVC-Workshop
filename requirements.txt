@@ -40,7 +40,7 @@ joblib==1.2.0
 json5==0.9.11
 jsonschema==4.17.3
 jupyter-server==1.23.6
-jupyter_client==7.4.9
+jupyter_client==8.0.3
 jupyter_core==5.2.0
 jupyterlab==3.6.1
 jupyterlab-pygments==0.2.2
