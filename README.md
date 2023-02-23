@@ -12,6 +12,31 @@ template and includes the key building blocks for making experiments for DVC
 VSCode extension. 
 Some of the cookie cutter template features have been dropped out for simplicity.
 
+
+### The Challenge
+
+Satellite position and Speed
+The number of RSOs - artificial objects that are in orbit around earth has nearly doubled during the last 2 decades, from around 11K to 20K in 2019. This number is expected to rise due to satellite technology improvements and lower costs of production.
+
+The challenge is to predict a more accurate orbit trajectory and satellite positions in order to avoid collisions and avoid the space debris. An uncontrolled chain of collisions and a huge amount of space debris cause what is called the Kessler Syndrome
+
+Kessler Syndrome is a phenomenon in which the amount of junk in orbit around Earth reacehs a point where it just creates more and more space Debris, causing substantial problems for satellites, astronauts and mission planners. Some of the day to day problems might include internet connections and mobile communications interruptions. In order to avoid cascade effects, we need to predict position and velocity for satellites.
+
+
+### Target variables & Machine Learning Challenge
+
+Taking into account the challenge and dataset, coming from an already known simulated trajectories (position and velocity) we want to predict real kinematic trajectories position and velocity. Therefore, we have multiple target variables and continuous variables. We will use a Random Forest Regressor.
+
+We use an ensemble method , in which we use multiple learning algorithms to obtain better predictive performance. For that we fit multiple target variable regression trees and average results. A random forest is a meta estimator that fits a number of classifying decision trees on various sub-samples of the dataset and uses averaging to improve the predictive accuracy and control over-fitting. The sub-sample size is controlled with the max_samples parameter if bootstrap=True (default), otherwise the whole dataset is used to build each tree. A random forest is a meta estimator that fits a number of classifying decision trees on various sub-samples of the dataset and uses averaging to improve the predictive accuracy and control over-fitting.
+
+In a nutshell, we could say that this strategy consists of fitting one regressor per target and then to an average ensemble method. If in in a single target scenario we fit one tree, here we have a forest.
+
+
+https://user-images.githubusercontent.com/24204714/221022813-70fea91e-e740-41d9-a52f-430a2560c0e3.mp4
+
+
+
+
 ### DVC Experiments
 ------------
 
