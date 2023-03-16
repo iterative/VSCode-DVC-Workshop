@@ -28,7 +28,7 @@ defusedxml==0.7.1
 entrypoints==0.4
 executing==1.2.0
 fastjsonschema==2.16.3
-fonttools==4.39.0
+fonttools==4.39.2
 idna==3.4
 importlib-metadata==6.0.0
 ipykernel==6.21.3
