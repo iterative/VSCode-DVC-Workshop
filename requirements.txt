@@ -18,7 +18,7 @@ dvc-data==0.47.2
 dvc-http==2.30.2
 dvc-objects==0.21.1
 dvc-render==0.3.1
-dvc-s3==2.21.0
+dvc-s3==2.22.0
 dvc-studio-client==0.8.0
 dvc-task==0.2.0
 dvclive==2.6.4
