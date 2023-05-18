@@ -78,7 +78,7 @@ pyrsistent==0.19.3
 python-dateutil==2.8.2
 pytz==2023.3
 pyzmq==25.0.2
-requests==2.29.0
+requests==2.30.0
 scikit-learn==1.2.2
 scipy==1.10.1
 seaborn==0.12.2
