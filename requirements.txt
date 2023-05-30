@@ -21,7 +21,7 @@ dvc-render==0.5.3
 dvc-s3==2.22.0
 dvc-studio-client==0.10.0
 dvc-task==0.2.1
-dvclive==2.10.1
+dvclive==2.11.0
 debugpy==1.6.7
 decorator==5.1.1
 defusedxml==0.7.1
