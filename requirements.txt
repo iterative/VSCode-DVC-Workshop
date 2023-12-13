@@ -67,7 +67,7 @@ pickleshare==0.7.5
 Pillow==10.0.1
 platformdirs==3.9.1
 prometheus-client==0.17.0
-prompt-toolkit==3.0.38
+prompt-toolkit==3.0.43
 psutil==5.9.5
 ptyprocess==0.7.0
 pure-eval==0.2.2
