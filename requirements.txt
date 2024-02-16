@@ -19,7 +19,7 @@ dvc-http==2.30.2
 dvc-objects==0.23.1
 dvc-render==0.5.3
 dvc-s3==2.23.0
-dvc-studio-client==0.10.0
+dvc-studio-client==0.20.0
 dvc-task==0.3.0
 dvclive==2.12.1
 debugpy==1.6.7
